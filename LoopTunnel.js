@@ -50,6 +50,15 @@ function countSumOfTwoRepresentations2(n, l, r) {
 
 }
 
+// --------------------------------------------------------
+// Calculates the amount of money given by the magical well
+// when casting a marble
+//
+// Problem #27
+//
+// @author Carlos L. Cuenca
+// @date 07/05/2020
+
 function magicalWell(a,b,n) {
 
 	var salary = 0
