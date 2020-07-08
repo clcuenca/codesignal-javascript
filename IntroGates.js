@@ -111,3 +111,20 @@ function circleOfNumbers(n, firstNumber) {
 	return (firstNumber + (n / 2)) % n
 
 }
+
+/**
+ * Given n minutes, returns the sum of the digits displayed as the time after
+ * 00:00
+ * 
+ * Problem #7
+ *
+ * @author: Carlos L. Cuenca
+ * @since: 07/08/2020
+ * @param {Number} n The amount of minutes elapsed after 00:00
+ * @return {Number} the sum of the digits of n minutes ater 00:00
+ */
+function lateRide(n) {
+
+	return parseInt(n/60/10) + parseInt(n/60%10) + parseInt(n%60/10) + parseInt(n%60%10);
+
+}
