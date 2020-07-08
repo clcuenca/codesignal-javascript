@@ -47,6 +47,6 @@ function largestNumber(n) {
  */
 function candies(n, m) {
 
-	return n * (m / n);
+	return n * parseInt(m / n);
 
 }
