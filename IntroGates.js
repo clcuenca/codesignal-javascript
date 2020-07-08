@@ -85,6 +85,7 @@ function seatsInTheater(nCols, nRows, col, row) {
  * @param {Number} divisor The multiple of n
  * @param {Number} bound The highest n  can reach
  */
+
 function maxMultiple(divisor, bound) {
 	
 	return bound - parseInt(bound % divisor);
@@ -106,6 +107,7 @@ function maxMultiple(divisor, bound) {
  * @param {Number} firstNumber The number that is the point of reference
  * @return {Number} The radially opposite number from firstNumber
  */
+
 function circleOfNumbers(n, firstNumber) {
 
 	return (firstNumber + (n / 2)) % n
@@ -123,8 +125,36 @@ function circleOfNumbers(n, firstNumber) {
  * @param {Number} n The amount of minutes elapsed after 00:00
  * @return {Number} the sum of the digits of n minutes ater 00:00
  */
+ 
 function lateRide(n) {
 
 	return parseInt(n/60/10) + parseInt(n/60%10) + parseInt(n%60/10) + parseInt(n%60%10);
+
+}
+
+/**
+ * Given the minute rates min1, min2_10, & min11. This function will return 
+ * the amount of minutes available from the given cents and the applicable 
+ * rates.
+ *
+ * Problem #8
+ *
+ * @author: Carlos L. Cuenca
+ * @since: 07/08/2020
+ * @param {Number} min1 The cost of the first minute
+ * @param {Number} min2_10 The cost of the second to 10th minute
+ * @param {Number} min11 The cost of the 11th and above minute
+ * @param {Number} s The amount of available cents
+ * @return {Number} The amount of minutes given cents, s
+ */
+
+function phoneCall(min1, min2_10, min11, s) {
+
+	if(!s || (s - min1) < 0) return 0;
+
+	if(s - min1 - 9*min2_10 < 0)
+		return parseInt((s - min1) / min2_10) + 1;
+
+	return parseInt((s - min1 - 9*min2_10)/min11) + 10
 
 }
