@@ -57,3 +57,23 @@ function knapsackLight(value1, weight1, value2, weight2, maxW) {
 	return value2;
 
 }
+
+/**
+ * Given three numbers where two are the same number, this method will return
+ * the extra unique number via xor result of all numbers.
+ * 
+ * Problem #11
+ *
+ * @author Carlos L. Cuenca
+ * @since: 07/16/2020
+ * @param a number The first value
+ * @param b number The second value
+ * @param c number The third value
+ * @return The unique value out of all three numbers.
+ */
+
+function extraNumber(a, b, c) {
+
+	return a ^ b ^ c;
+
+}
