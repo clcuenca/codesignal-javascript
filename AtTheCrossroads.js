@@ -7,12 +7,11 @@
  *
  * @author: Carlos L. Cuenca
  * @since: 07/16/2020
- * @param number experience The amount of experience earned
- * @param number threshold The amount of experience needed to level up
- * @param number reward The amount of awarded experience
+ * @param Number experience The amount of experience earned
+ * @param Number threshold The amount of experience needed to level up
+ * @param Number reward The amount of awarded experience
  * @return boolean value denoting if the next level has been reached
  */
-
 function reachNextLevel(experience, threshold, reward) {
 
 	return (experience + reward) >= threshold;
@@ -27,13 +26,12 @@ function reachNextLevel(experience, threshold, reward) {
  *
  * @author: Carlos L. Cuenca
  * @since: 07/16/2020
- * @param number value1 The value of the first stone
- * @param number weight1 The weight of the first stone
- * @param number value2 The value of the second stone
- * @param number weight2 The weight of the second stone
- * @return number Value of the maximum amount of stones that can be carried
+ * @param Number value1 The value of the first stone
+ * @param Number weight1 The weight of the first stone
+ * @param Number value2 The value of the second stone
+ * @param Number weight2 The weight of the second stone
+ * @return Number Value of the maximum amount of stones that can be carried
  */
-
 function knapsackLight(value1, weight1, value2, weight2, maxW) {
 
 	if((weight1 + weight2) <= maxW) {
@@ -66,12 +64,11 @@ function knapsackLight(value1, weight1, value2, weight2, maxW) {
  *
  * @author Carlos L. Cuenca
  * @since: 07/16/2020
- * @param a number The first value
- * @param b number The second value
- * @param c number The third value
+ * @param a Number The first value
+ * @param b Number The second value
+ * @param c Number The third value
  * @return The unique value out of all three numbers.
  */
-
 function extraNumber(a, b, c) {
 
 	return a ^ b ^ c;
@@ -87,14 +84,31 @@ function extraNumber(a, b, c) {
  * 
  * @author Carlos L. Cuenca
  * @since: 07/13/2020
- * @param a int The value of a
- * @param b int The value of b
- * @param c int the Value of c 
+ * @param a Number The value of a
+ * @param b Number The value of b
+ * @param c Number the Value of c 
  * @return bool indicating a proper 
  */
- 
 function isInfiniteProcess(a, b) {
 
 	return (a > b) || ((a - b) % 2 != 0);
+
+}
+
+/**
+ * Given a, b, & c this function returns a boolean indicating if any of the
+ * arithmetic expressions are true. (a + b = c, a - b = c, a * b = c, a / b = c)
+ *
+ * Problem #13
+ *
+ * @param a Number The first term
+ * @param b Number The second term
+ * @param c Number The resulting term
+ * @return boolean indicating if the terms equal
+ */
+function arithmeticExpression(a, b, c) {
+
+	return ((a + b) == c) || ((a - b) == c) || ((a * b) == c) ||
+			((a / b) == c && (a % b) == 0);
 
 }
