@@ -77,3 +77,24 @@ function extraNumber(a, b, c) {
 	return a ^ b ^ c;
 
 }
+
+/**
+ * Given numbers a, b, & c and an arithmetic expression in the form a#b = c
+ * this function checks if it's possible to replace # with one of the four signs
+ * +, -, *, or / to obtain a correct expression
+ *
+ * Problem #13
+ * 
+ * @author Carlos L. Cuenca
+ * @since: 07/13/2020
+ * @param a int The value of a
+ * @param b int The value of b
+ * @param c int the Value of c 
+ * @return bool indicating a proper 
+ */
+ 
+function isInfiniteProcess(a, b) {
+
+	return (a > b) || ((a - b) % 2 != 0);
+
+}
