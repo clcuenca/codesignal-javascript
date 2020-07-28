@@ -80,7 +80,7 @@ function extraNumber(a, b, c) {
  * this function checks if it's possible to replace # with one of the four signs
  * +, -, *, or / to obtain a correct expression
  *
- * Problem #13
+ * Problem #12
  * 
  * @author Carlos L. Cuenca
  * @since: 07/13/2020
@@ -110,5 +110,70 @@ function arithmeticExpression(a, b, c) {
 
 	return ((a + b) == c) || ((a - b) == c) || ((a * b) == c) ||
 			((a / b) == c && (a % b) == 0);
+
+}
+
+
+/**
+ * Given two scores (score1 & score2) this function returns a boolean value indicating
+ * if a tennis set can be completed
+ *
+ * Problem #14
+ *
+ * @param score1 The first player's score
+ * @param score2 The second player's score
+ * @return boolean value indicating a completable
+ */
+function tennisSet(score1, score2) {
+
+	if((score1 + score2) >= 6) {
+
+		if((score1 == 6) && score2 < 5) {
+
+			return true;
+
+		}
+
+		if((score2 == 6) && score1 < 5) {
+
+			return true;
+
+		}
+        
+    }
+
+	if((score1 + score2) >= 12) {
+
+		if((score1 == 7) && ((score2 == 5) || (score2 == 6))) {
+			
+            return true;
+
+		}
+
+		if((score2 == 7) && ((score1 == 5) || (score1 == 6))) {
+
+			return true;
+
+		}
+
+	}
+
+	return false;
+
+}
+
+/**
+ * Returns a boolean value that shatters expectations
+ *
+ * Problem #15
+ *
+ * @param young Young
+ * @param beautiful Beautiful
+ * @param loved Loved
+ * @return Truth shattering boolean value
+ */
+function willYou(young, beautiful, loved) {
+
+	return (young && beautiful && !loved) ^ (loved && !(young && beautiful)) != 0 ? true : false;
 
 }
