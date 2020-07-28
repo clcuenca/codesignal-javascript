@@ -113,7 +113,6 @@ function arithmeticExpression(a, b, c) {
 
 }
 
-
 /**
  * Given two scores (score1 & score2) this function returns a boolean value indicating
  * if a tennis set can be completed
@@ -175,5 +174,38 @@ function tennisSet(score1, score2) {
 function willYou(young, beautiful, loved) {
 
 	return (young && beautiful && !loved) ^ (loved && !(young && beautiful)) != 0 ? true : false;
+
+}
+
+/**
+ * Given The last number of days, this method returns the possible number of days
+ * the metro card will refill by.
+ *
+ * Problem #16
+ *
+ * @param Number lastNumberOfDays The last number of days the card was filled
+ * @return array containing the possible refill
+ */
+function metroCard(lastNumberOfDays) {
+
+    var returnArray;
+
+    var MONTH_30 = 30;
+    var MONTH_31 = 31;
+    var MONTH_28 = 28;
+
+    // January, March, May, July, August, October, December
+    if(lastNumberOfDays == MONTH_31){
+
+        returnArray = [MONTH_28, MONTH_30, MONTH_31];
+
+            // Feburary, April, June, September, November
+    } else {
+
+        returnArray = [MONTH_31];
+
+    }
+
+    return returnArray;
 
 }
