@@ -1,4 +1,3 @@
-
 /**
  * Given experience, threshold,  & reward; this function will return
  * a boolean denoting if the player is to reach the next level.
