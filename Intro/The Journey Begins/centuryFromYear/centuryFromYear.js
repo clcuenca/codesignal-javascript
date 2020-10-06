@@ -1,6 +1,6 @@
 /**
  * CodeSignal - Intro - The Journey Begins
- * add
+ * centuryFromYear
  * Author: Carlos L. Cuenca
  * Date: 10/06/20
  */
@@ -16,29 +16,19 @@ var reader = readline.createInterface({
 
 reader.on('line', function(line) {
 
-	var parameters = line.split(" ");
-
-	console.log(add(parseInt(parameters[0], 10), parseInt(parameters[1], 10)));
+	console.log(centuryFromYear(parseInt(line, 10)));
 
 });
 
-/**
- * Adds two numbers & returns the result
- * 
- * Problem #9
- *
- * @author: Carlos L. Cuenca
- * @since: 10/06/2020
- * @param Number param1 The first number to add
- * @param Number param2 The second number to add
- * @return Number the result of the addition operation
- */
-function add(param1, param2) {
+function centuryFromYear(year) {
 
- 	return param1 + param2;
+	var century = year / 100;
+
+	if(year % 100 != 0) century++;
+
+	return century;
 
 }
-
 
 
 
