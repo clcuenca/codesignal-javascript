@@ -24,8 +24,6 @@ reader.on('line', function(line) {
 
 /**
  * Adds two numbers & returns the result
- * 
- * Problem #9
  *
  * @author: Carlos L. Cuenca
  * @since: 10/06/2020
